@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root{
+    --primary-soft-red: hsl(10, 79%, 65%);
+    --primary-cyan: hsl(186, 34%, 60%);
+    --neutral-dark-brown: hsl(25, 47%, 15%);
+    --neutral-medium-brown: hsl(28, 10%, 53%);
+    --neutral-cream: hsl(27, 66%, 92%);
+    --neutral-very-pale: hsl(33, 100%, 98%);
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'DM Sans';
+}
+body{
+    background-color: var(--neutral-cream);
+    font-size: 18px;
+}
+.header-wrapper{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-soft-red);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1.5rem;
+    
+}
+.mybal-wrapper p{
+    margin-bottom: 0.2rem;
+}
+.main-wrapper{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--neutral-very-pale);
+    margin: 1rem;
+    padding: 1.5rem;
+}
+.headline{
+    color: var(--neutral-dark-brown);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.bars{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 12em;
+    position: relative;
+}
+.bars li{
+    text-align: center;
+    display: table-cell;
+    height: 9rem;
+    position: relative;
+    width: 1rem;
+    transform: translate(-50%,-50%);
+    top: 8rem;
+
+}
+.bars .bar:hover{
+    background-color: var(--primary-cyan);
+    cursor: pointer;
+}
+.bars .bar{
+    border-radius: 5px;
+    background-color: var(--primary-soft-red);
+    width: 2rem;
+    margin: 0.7rem 0;
+    transition: 0.2s;
+    position: absolute;
+    bottom: 0;
+}
+.bars span{
+    color: var(--neutral-medium-brown);
+    position: absolute;
+    bottom: -20px;
+    text-align: center;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+}
+.divider{
+    border: 1px solid var(--neutral-cream);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.group-total{
+    display: flex;
+    justify-content: space-between;
+}
+.group-total p{
+    color: var(--neutral-medium-brown);
+    font-size: 14px;
+
+}
+.total-wrapper h4{
+    color: var(--neutral-dark-brown);
+    font-size: 28px;
+}
+.percent-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: 
+    center; 
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
