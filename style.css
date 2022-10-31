@@ -28,7 +28,7 @@ body{
     justify-content: space-between;
     margin: 1rem;
     padding: 1.5rem;
-    
+
 }
 .mybal-wrapper p{
     margin-bottom: 0.2rem;
@@ -64,20 +64,22 @@ body{
     top: 8rem;
 
 }
-.bars .bar:hover{
+.bars li:hover{
+    opacity: 0.5;
+    transition: 0.1s;
+}
+.bars li .max {
     background-color: var(--primary-cyan);
-    cursor: pointer;
 }
 .bars .bar{
     border-radius: 5px;
     background-color: var(--primary-soft-red);
     width: 2rem;
     margin: 0.7rem 0;
-    transition: 0.2s;
     position: absolute;
     bottom: 0;
 }
-.bars span{
+.bars .days{
     color: var(--neutral-medium-brown);
     position: absolute;
     bottom: -20px;
@@ -85,6 +87,16 @@ body{
     left: 100%;
     transform: translate(-50%, -50%);
     font-size: 12px;
+}
+.bars .stats{
+    color: #000;
+    position: absolute;
+    bottom: 10rem;
+    text-align: center;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    /*display: none;*/
 }
 .divider{
     border: 1px solid var(--neutral-cream);
@@ -117,4 +129,22 @@ body{
 }
 .attribution a {
     color: hsl(228, 45%, 44%); 
+}
+@media screen and (min-width: 400px){
+    .header-wrapper, .main-wrapper{
+        position: absolute;
+        /*align-items: center;*/
+        transform: translate(-50%, -50%);
+        left: 50%;
+        margin: 0 auto;
+    }
+    .header-wrapper{
+        top: 18%;
+        width: 275px;
+
+    }
+    .main-wrapper{
+        top: 60%;
+        width: 275px;
+    }
 }

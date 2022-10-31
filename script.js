@@ -1,26 +1,47 @@
 const bars = document.querySelector('.bars');
-console.log(bars);
+// console.log(bars);
+
+const arr = [];
+const numbers = [];
 
 fetch('./data.json').then((res)=>{
 	return res.json();
 }).then((jsonData) => {
 	for(const data of jsonData){
+	
 		const days = data.day;
 		const amount = data.amount;
 		const list = document.createElement('li');
 		const bar = document.createElement('div');
-		const span = document.createElement('span');
+		const dd = document.createElement('span');
+		const stats = document.createElement('span');
 		
-		span.innerText = days
+		dd.innerText = days
+		stats.innerText = amount
 
 		bar.classList.add('bar')
-		bar.style.height = amount * 2 + '%'
+		dd.classList.add('days')
+		stats.classList.add('stats')
 
-		list.append(bar, span);
+		const barHeight = amount * 2;
+		bar.style.height = barHeight + '%';
+		bar.setAttribute('data-amount', '$' + amount);
+
+		list.append(bar, dd, stats);
 		bars.append(list);
 
-		console.log(list);
+		arr.push(bar);
+
+		const dataAttr = bar.dataset.amount;
+		const number = dataAttr.substring(1);
+
+		numbers.push(number)
+		console.log(bars)
+
 	}
+	const max = '$' + Math.max(...numbers);
+	const charWithHighestAmount = arr.find(el => el.dataset.amount === max)
+
+	charWithHighestAmount.classList.add('max')
+
 });
-
-
