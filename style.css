@@ -154,7 +154,7 @@ body{
         /*align-items: center;*/
         transform: translate(-50%, -50%);
         left: 50%;
-        margin: 0 auto;
+        margin: 1rem 0 auto;
     }
     .header-wrapper{
         top: 18%;
