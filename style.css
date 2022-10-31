@@ -149,12 +149,10 @@ body{
     color: hsl(228, 45%, 44%); 
 }
 @media screen and (min-width: 400px){
-    .header-wrapper, .main-wrapper{
-        position: absolute;
-        /*align-items: center;*/
-        transform: translate(-50%, -50%);
-        left: 50%;
-        margin: 1rem 0 auto;
+    body{
+        display: flex;
+        justify-content: center;
+        transform: translateY(5%);
     }
     .header-wrapper{
         top: 18%;
