@@ -37,7 +37,7 @@ body{
     border: none;
     border-radius: 10px;
     background-color: var(--neutral-very-pale);
-    margin: 1rem;
+    margin: 5px;
     padding: 1.5rem;
 }
 .headline{
@@ -149,9 +149,10 @@ body{
     color: hsl(228, 45%, 44%); 
 }
 @media screen and (min-width: 400px){
-    body{
+    .master-wrapper{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         transform: translateY(5%);
     }
     .header-wrapper{
