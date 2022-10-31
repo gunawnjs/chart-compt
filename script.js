@@ -27,7 +27,7 @@ fetch('./data.json').then((res)=>{
 		bar.style.height = barHeight + '%';
 		bar.setAttribute('data-amount', '$' + amount);
 
-		list.append(bar, dd, stats);
+		list.append(bar, dd);
 		bars.append(list);
 
 		arr.push(bar);

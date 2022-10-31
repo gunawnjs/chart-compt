@@ -57,16 +57,12 @@ body{
 .bars li{
     text-align: center;
     display: table-cell;
-    height: 9rem;
+    height: 8rem;
     position: relative;
     width: 1rem;
     transform: translate(-50%,-50%);
     top: 8rem;
 
-}
-.bars li:hover{
-    opacity: 0.5;
-    transition: 0.1s;
 }
 .bars li .max {
     background-color: var(--primary-cyan);
@@ -78,6 +74,28 @@ body{
     margin: 0.7rem 0;
     position: absolute;
     bottom: 0;
+    transition: all 0.1s ease-out;
+    cursor: pointer;
+}
+.bars .bar:hover::before{
+    display: none;
+}
+.bars .bar:hover::after{
+    display: block;
+    content: attr(data-amount);
+    background-color: var(--neutral-dark-brown);
+    color: var(--neutral-very-pale);
+    text-align: center;
+    position: relative;
+    justify-content: space-around;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 1.2rem;
+    padding: 0.2rem;
+    width: 100%;
+    border-radius: 3px;
+    font-size: 10px;
+
 }
 .bars .days{
     color: var(--neutral-medium-brown);
