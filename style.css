@@ -19,6 +19,13 @@ body{
     background-color: var(--neutral-cream);
     font-size: 18px;
 }
+.master-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
 .header-wrapper{
     border: none;
     border-radius: 10px;
@@ -26,7 +33,7 @@ body{
     color: #fff;
     display: flex;
     justify-content: space-between;
-    margin: 1rem;
+    margin: 1rem 5px;
     padding: 1.5rem;
 
 }
@@ -140,20 +147,11 @@ body{
   justify-content: flex-end;
   text-align: right;
 }
-.attribution { 
-    font-size: 11px; 
-    text-align: 
-    center; 
-}
-.attribution a {
-    color: hsl(228, 45%, 44%); 
-}
 @media screen and (min-width: 400px){
     .master-wrapper{
         display: flex;
         flex-direction: column;
         align-items: center;
-        transform: translateY(5%);
     }
     .header-wrapper{
         top: 18%;
